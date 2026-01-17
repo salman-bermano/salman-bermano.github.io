@@ -1,0 +1,129 @@
+:root {
+    --bg-dark: #6283a7;
+    --bg-light: #6e93b8;
+    --primary: #fffc62; /*#9AD9CF; */
+    --secondary: #91BA86;
+    --text-main: #ffffff;
+    --text-muted: #e4f5ff;
+    --accent-glow: rgba(154, 217, 207, 0.25);
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-text {
+    color: var(--text-main);
+}
+
+.homepage-title-welcome{
+    color: var(--primary) !important;
+}
+
+.homepage-title {
+    color: var(--text-muted);
+}
+
+.navbar {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--text-main) !important;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff !important;
+}
+
+#router-view {
+    flex: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0 !important;
+}
+
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.project-card {
+    background-color: var(--bg-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+footer {
+    margin-top: auto;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    color: var(--text-main);
+    background-color: var(--bg-dark);
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--bg-dark);
+}
+
+.btn-primary:active {
+    animation: press 0.25s ease-in-out;
+    color: var(--text-main) !important;
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
+
+@keyframes press {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(0.9); }   
+    60%  { transform: scale(0.95); }  
+    80%  { transform: scale(0.98); }  
+    100% { transform: scale(1); }     
+}
+
+.form-control {
+    background-color: var(--bg-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-main);
+}
+
+.form-control:focus {
+    background-color: var(--bg-light);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem var(--accent-glow);
+    color: var(--text-main);
+}
