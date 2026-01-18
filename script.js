@@ -81,7 +81,7 @@ async function renderPage(url) {
                 content = `<div class="container py-5 text-center">
                     <h3>Page not found</h3>
                     <p>Tried to load: ${relativeUrl}</p>
-                    <a href="index.html" class="btn btn-primary spa-link">Go Home</a>
+                    <a href="index.html" class="btn btn-primary spa-link">go home</a>
                 </div>`;
             }
         }
@@ -101,6 +101,37 @@ function extractContent(htmlString) {
     const content = doc.getElementById('router-view');
     return content ? content.innerHTML : '<h1>Content not found in fetched file</h1>';
 }
+
+const routes = {
+    "/": {
+      title: "Home – My SPA",
+      render: () => `<h1>Home</h1><p>Welcome to the homepage!</p>`
+    },
+    "/about": {
+      title: "About – My SPA",
+      render: () => `<h1>About</h1><p>About this app.</p>`
+    },
+    "/contact": {
+      title: "Contact – My SPA",
+      render: () => `<h1>Contact</h1><p>Contact us here.</p>`
+    },
+    "my-work": {
+        title: "",
+        render: () => ``
+    }
+  };
+
+  function renderRoute() {
+    const path = location.hash.slice(1) || "/";
+    
+    const route = routes[path] || {
+      title: "404 – Not Found",
+      render: () => "<h1>404</h1><p>Page not found.</p>"
+    };
+  
+    document.title = route.title;
+    document.getElementById("app").innerHTML = route.render();
+  }
 
 function updateActiveNav(path) {
     const cleanPath = path.replace(/^\//, '') || 'index.html';
