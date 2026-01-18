@@ -155,21 +155,21 @@ footer {
 }
 
 .send-message-btn {
-    background-color: var(--text-muted);
-    border-color: var(--text-muted);
-    color: var(--bg-dark);
+    background-color: var(--bg-dark);
+    border-color: var(--bg-dark);
+    color: var(--text-muted);
     font-weight: 600;
 }
 
 .send-message-btn:hover {
-    background-color: var(--text-muted);
-    border-color: var(--text-muted);
-    color: var(--bg-dark);
+    background-color: var(--bg-dark);
+    border-color: var(--bg-dark);
+    color: var(--text-muted);
 }
 
 .send-message-btn:active {
     animation: press 0.105s ease-in-out;
-    background-color: var(--text-muted) !important;
-    border-color: var(--text-muted) !important;
-    color: var(--bg-dark) !important;
+    background-color: var(--bg-dark) !important;
+    border-color: var(--bg-dark) !important;
+    color: var(--text-muted) !important;
 }
