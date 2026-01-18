@@ -107,15 +107,15 @@ const routes = {
       title: "Home – My SPA",
       render: () => `<h1>Home</h1><p>Welcome to the homepage!</p>`
     },
-    "/about.html": {
+    "/about": {
       title: "About – My SPA",
       render: () => `<h1>About</h1><p>About this app.</p>`
     },
-    "/contact.html": {
+    "/contact": {
       title: "Contact – My SPA",
       render: () => `<h1>Contact</h1><p>Contact us here.</p>`
     },
-    "my-work.html": {
+    "my-work": {
         title: "",
         render: () => ``
     }
