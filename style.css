@@ -68,8 +68,7 @@ body {
 }
 
 .project-card {
-    background-color: var(--bg-light);
-    border: 1px solid rgba(255,255,255,0.1);
+    background-color: var(--secondary);
     transition: transform 0.2s;
 }
 
@@ -105,6 +104,30 @@ footer {
     color: var(--text-main) !important;
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
+}
+
+.btn-work {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--bg-dark);
+    font-weight: 600;
+}
+
+.btn-work:hover {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--bg-dark);
+}
+
+.btn-work:active {
+    animation: press 0.105s ease-in-out;
+    background-color: var(--text-muted) !important;
+    border-color: var(--text-muted) !important;
+    color: var(--bg-dark) !important;
+}
+
+.project-title {
+    color: var(--text-main);
 }
 
 @keyframes press {
