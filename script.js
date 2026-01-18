@@ -98,6 +98,10 @@ async function renderPage(url) {
 function extractContent(htmlString) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlString, 'text/html');
+    const newTitle = doc.querySelector('title');
+    if (newTitle) {
+        document.title = newTitle.innerText;
+    }
     const content = doc.getElementById('router-view');
     return content ? content.innerHTML : '<h1>Content not found in fetched file</h1>';
 }
