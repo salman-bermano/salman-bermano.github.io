@@ -153,3 +153,23 @@ footer {
     box-shadow: 0 0 0 0.25rem var(--accent-glow);
     color: var(--text-main);
 }
+
+.send-message-btn {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--bg-dark);
+    font-weight: 600;
+}
+
+.send-message-btn:hover {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--bg-dark);
+}
+
+.send-message-btn:active {
+    animation: press 0.105s ease-in-out;
+    background-color: var(--text-muted) !important;
+    border-color: var(--text-muted) !important;
+    color: var(--bg-dark) !important;
+}
