@@ -1,7 +1,7 @@
 :root {
     --bg-dark: #6283a7;
     --bg-light: #6e93b8;
-    --primary: #fffc62; /*#9AD9CF; */
+    --primary: #fffc62;
     --secondary: #91BA86;
     --text-main: #ffffff;
     --text-muted: #e4f5ff;
@@ -155,21 +155,27 @@ footer {
 }
 
 .send-message-btn {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     border-color: var(--bg-dark);
-    color: var(--text-muted);
+    color: var(--primary);
     font-weight: 600;
 }
 
 .send-message-btn:hover {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     border-color: var(--bg-dark);
-    color: var(--text-muted);
+    color: var(--primary);
 }
 
 .send-message-btn:active {
     animation: press 0.105s ease-in-out;
-    background-color: var(--bg-dark) !important;
+    background-color: var(--bg-light) !important;
     border-color: var(--bg-dark) !important;
-    color: var(--text-muted) !important;
+    color: var(--primary) !important;
+}
+
+.custom-hr-bar {
+    border: none;  
+    border-top: solid #fffc62;
+    opacity: 1; 
 }
