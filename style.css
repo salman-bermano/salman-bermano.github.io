@@ -6,6 +6,7 @@
     --text-main: #ffffff;
     --text-muted: #e4f5ff;
     --accent-glow: rgba(154, 217, 207, 0.25);
+    --link-color: #156EFD;
 }
 
 body {
@@ -189,6 +190,29 @@ footer {
     color: var(--bg-dark);
 }
 
+.third-skill {
+    background-color: var(--primary);
+    color: black;
+}
+
 img.my-image {
     border-radius: 20%;
+}
+
+.social-link {
+    color: var(--link-color);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    display: block; 
+    margin-bottom: 0.5rem;
+}
+
+.social-link:hover {
+    color: black;
+}
+
+.email-bar-aboutme {
+    border: none;  
+    border-top: 2px solid var(--secondary);
+    opacity: 1;
 }
