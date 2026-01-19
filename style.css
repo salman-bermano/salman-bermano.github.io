@@ -188,3 +188,7 @@ footer {
     background-color: var(--text-muted);
     color: var(--bg-dark);
 }
+
+img.my-image {
+    border-radius: 20%;
+}
