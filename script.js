@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function getRelativeUrl(url) {
 
-    let relative = url.replace(window.location.origin, '').replace(/^\
+    let relative = url.replace(window.location.origin, '').replace(/^\//, '') || 'index.html';
 
     return relative === '' ? 'index.html' : relative;
 }
