@@ -179,3 +179,12 @@ footer {
     border-top: solid var(--primary);
     opacity: 1; 
 }
+
+.main-skill {
+    background-color: var(--secondary);
+}
+
+.second-skill {
+    background-color: var(--text-muted);
+    color: var(--bg-dark);
+}
