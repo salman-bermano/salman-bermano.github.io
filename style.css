@@ -63,34 +63,31 @@ body {
 }
 
 .hero-section {
-    position: relative; /* Needed for positioning the ripple */
-    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); /* Placeholder Sci-Fi bg */
+    position: relative; 
+    background-image: url('photo.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden; /* Contains the ripple animation inside the section */
-    /* Remove the default background color since we have an image now */
+    overflow: hidden; 
     background-color: transparent; 
 }
 
-/* New class for the inner content column */
 .hero-content-box {
-    background-color: var(--bg-light); /* The color you requested */
+    background-color: var(--bg-light); 
     padding: 3rem;
     border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Adds depth */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     position: relative;
-    z-index: 2; /* Ensures text sits comfortably above the background interactions */
+    z-index: 2; 
 }
 
-/* RIPPLE ANIMATION STYLES */
 span.ripple {
     position: absolute;
     border-radius: 50%;
     transform: scale(0);
     animation: ripple 600ms linear;
     background-color: rgba(255, 255, 255, 0.7);
-    pointer-events: none; /* Let clicks pass through to things underneath if needed */
+    pointer-events: none; 
 }
 
 @keyframes ripple {
