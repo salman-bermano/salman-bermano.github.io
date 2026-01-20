@@ -95,6 +95,34 @@ async function renderPage(url) {
     }, 200);
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    initHeroAnimation();
+});
+
+document.addEventListener('htmx:afterSwap', () => {
+    initHeroAnimation();
+});
+
+function initHeroAnimation() {
+    const hero = document.getElementById('interactive-hero');
+    
+    if (!hero) return;
+    hero.addEventListener('click', function (e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        hero.appendChild(ripple);
+        const rect = hero.getBoundingClientRect();
+        const diameter = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = `${diameter}px`;
+        ripple.style.left = `${e.clientX - rect.left - diameter / 2}px`;
+        ripple.style.top = `${e.clientY - rect.top - diameter / 2}px`;
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+}
+
 function extractContent(htmlString) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlString, 'text/html');
